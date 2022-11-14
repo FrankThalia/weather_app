@@ -1,0 +1,71 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+}
+h1 {
+  color: whitesmoke;
+  font-family: "Caveat", cursive;
+  font-size: 50px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: #dae8f3;
+  font-weight: 600;
+}
+h2 .fa-sun {
+  font-size: 60px;
+  color: rgb(254, 194, 28);
+}
+
+ul {
+  list-style-type: none;
+}
+.container {
+  margin: 40px auto;
+  max-width: 700px;
+}
+.card {
+  border-color: white;
+}
+.card-body {
+  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  border-radius: 10px;
+}
+.btn-primary {
+  background-color: rgb(38, 38, 194);
+  border-color: rgb(38, 38, 194);
+  color: black;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.chose-city {
+  border-radius: 5px;
+  background-color: rgb(245, 243, 248);
+}
+
+.list-group {
+  --bs-list-group-border-color: rgb(255, 255, 255);
+}
+.weather-day {
+  width: 6rem;
+  margin: 5px auto;
+}
+
+.weather-list {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.fa-sun {
+  color: rgb(254, 194, 28);
+  font-size: 25px;
+}
+.fa-cloud-rain,
+.fa-cloud,
+.fa-cloud-sun {
+  color: rgb(38, 38, 194);
+  font-size: 25px;
+}
