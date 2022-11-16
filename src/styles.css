@@ -69,3 +69,6 @@ ul {
   color: rgb(38, 38, 194);
   font-size: 25px;
 }
+.git-link {
+  text-align: left;
+}
