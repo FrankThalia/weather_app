@@ -3,7 +3,7 @@ function formatDate() {
   let now = new Date();
   let days = [
     "Sunday",
-    "Monay",
+    "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
