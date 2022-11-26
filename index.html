@@ -24,7 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
-
+    <link href="src/script.js" rel="stylesheet" type="text/css" />
     <script
       src="https://kit.fontawesome.com/f4bcc7fbda.js"
       crossorigin="anonymous"
@@ -33,52 +33,52 @@
   </head>
   <body>
     <div class="container">
-      <div class="container text-center">
         <div class="card">
           <div class="card-body">
-            <div class="row">
-              <div class="col-sm">
                 <form id="form">
+<div class="row">
+            <div class="col-9">
                   <input
-                    class="chose-city"
-                    type="text"
-                    placeholder="Chose another city"
-                    id="text-input"
+                    class="form-control"
+                    type="search"
+                    placeholder="Type a city"
+                    id="city-input"
                   />
-                  <button type="submit" class="btn btn-primary">Go</button>
+                </div>
+                <div class="col-3">
+                  <input type="submit" class="btn btn-primary w-100" value="Search" />
+                </div>
+                </div>
                 </form>
+                <div class="overview">
+                  <ul>
+                    <h1 id="city">London</h1>
+                    <li>Last updated: <span id="actual-day"></span>, <span id="actual-date"></span> at <span id="actual-hours"></span>:<span id="actual-minutes"></span></li>
+                    <li id="description">Sunny day</li>
+                  </ul>
+                </div> 
 
-                <span>
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    id="locationNow"
-                  >
-                    Where am I?
-                  </button></span
-                >
-                <h1 id="city">London</h1>
-                <h2>
-                  <i class="fa-solid fa-sun"></i>
-                  <br />
-                  Sunny day
-                </h2>
-                <h3>
-                  <i id="actual-day">Saturday</i>,
-                  <i id="actual-date">22</i>
-                </h3>
-                <h4>
-                  <span class="currentTEmperature">19</span>
+                <div class="row"> 
+                <div class="col-6">
+                  <div class="d-flex weather-temperature" alt="" id="icon">
+                    
+                <img src="https://ssl.gstatic.com/onebox/weather/64/rain_heavy.png"></i>
+                <div class="tempUnit">
+                  <strong id="temperature">19</strong
+                    ><span class="units"
+                      >
                   <a href="#" id="celsius"> °C </a>|
                   <a href="#" id="fahrenheit"> °F</a>
-                </h4>
-                <h5>
-                  <i id="actual-hours">10</i>
-                  :
-                  <i id="actual-minutes">00</i>
-                </h5>
-              </div>
-
+                  </div>
+                  </div>
+               </div>
+              
+              <div class="col-6"><ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> m/s</li>
+                </ul></div>
+                </div>
+                <div class="weather-forecast" id="forecast"></div>
               <div class="row weather-list">
                 <div class="col-sm">
                   <div class="card weather-day">
@@ -138,16 +138,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="git-link">
+          <div class="git-link">
           <a href="https://github.com/FrankThalia/weather_app.git"
             >Open-source code</a
           >
           by Kseniia Okorokova
         </div>
+        </div>
+        
       </div>
     </div>
-
-    <script src="src/script.js"></script>
   </body>
 </html>
