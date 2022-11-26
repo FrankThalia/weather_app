@@ -42,43 +42,39 @@
                   <input
                     class="chose-city"
                     type="text"
-                    placeholder="Chose another city"
+                    placeholder="Type a city"
                     id="text-input"
                   />
-                  <button type="submit" class="btn btn-primary">Go</button>
+                  <button type="submit" class="btn btn-primary">Search</button>
                 </form>
-
-                <span>
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    id="locationNow"
-                  >
-                    Where am I?
-                  </button></span
-                >
-                <h1 id="city">London</h1>
-                <h2>
-                  <i class="fa-solid fa-sun"></i>
-                  <br />
-                  Sunny day
-                </h2>
-                <h3>
-                  <i id="actual-day">Saturday</i>,
-                  <i id="actual-date">22</i>
-                </h3>
-                <h4>
-                  <span class="currentTEmperature">19</span>
-                  <a href="#" id="celsius"> °C </a>|
-                  <a href="#" id="fahrenheit"> °F</a>
-                </h4>
-                <h5>
-                  <i id="actual-hours">10</i>
-                  :
-                  <i id="actual-minutes">00</i>
-                </h5>
               </div>
-
+              <div class="overview">
+                <ul>
+                  <h1 id="city">London</h1>
+                  <li>
+                    Last updated:
+                    <span id="actual-day">Saturday</span>,
+                    <i id="actual-date">22</i>
+                    at
+                    <i id="actual-hours">10</i>
+                    :
+                    <i id="actual-minutes">00</i>
+                  </li>
+                  <li class="description">Sunny day</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <i class="fa-solid fa-sun"></i>
+                <span class="currentTEmperature">19</span>
+                <a href="#" id="celsius"> °C </a>|
+                <a href="#" id="fahrenheit"> °F</a>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> m/s</li>
+                </ul>
+              </div>
               <div class="row weather-list">
                 <div class="col-sm">
                   <div class="card weather-day">
@@ -88,50 +84,6 @@
                       </li>
                       <li class="list-group-item">11/18°</li>
                       <li class="list-group-item">Sun</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-sun"></i>
-                      </li>
-                      <li class="list-group-item">14/20°</li>
-                      <li class="list-group-item">Mon</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud-sun"></i>
-                      </li>
-                      <li class="list-group-item">10/18°</li>
-                      <li class="list-group-item">Tue</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud"></i>
-                      </li>
-                      <li class="list-group-item">9/16°</li>
-                      <li class="list-group-item">Wed</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud-rain"></i>
-                      </li>
-                      <li class="list-group-item">8/15°</li>
-                      <li class="list-group-item">Thu</li>
                     </ul>
                   </div>
                 </div>
