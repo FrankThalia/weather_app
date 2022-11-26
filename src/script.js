@@ -47,21 +47,6 @@ function showTemp(response) {
   let temp = document.querySelector(".currentTEmperature");
   temp.innerHTML = Math.round(response.data.main.temp);
 }
-//Show weather in current location
-function nowIKnow(position) {
-  let apiKey = "743bee57fddbfaf52447193a87d5dd25";
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&&units=metric`;
-  axios.get(apiUrl).then(showTemp);
-}
-
-function currentCicy(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(nowIKnow);
-}
-
-document.querySelector("#locationNow").addEventListener("click", currentCicy);
 
 //Change temperature when press F
 function changeFahrenheit() {

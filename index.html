@@ -33,119 +33,124 @@
   </head>
   <body>
     <div class="container">
-        <div class="card">
-          <div class="card-body">
-                <form id="form">
-<div class="row">
-            <div class="col-9">
-                  <input
-                    class="form-control"
-                    type="search"
-                    placeholder="Type a city"
-                    id="city-input"
-                  />
-                </div>
-                <div class="col-3">
-                  <input type="submit" class="btn btn-primary w-100" value="Search" />
-                </div>
-                </div>
-                </form>
-                <div class="overview">
-                  <ul>
-                    <h1 id="city">London</h1>
-                    <li>Last updated: <span id="actual-day"></span>, <span id="actual-date"></span> at <span id="actual-hours"></span>:<span id="actual-minutes"></span></li>
-                    <li id="description">Sunny day</li>
-                  </ul>
-                </div> 
-
-                <div class="row"> 
-                <div class="col-6">
-                  <div class="d-flex weather-temperature" alt="" id="icon">
-                    
-                <img src="https://ssl.gstatic.com/onebox/weather/64/rain_heavy.png"></i>
+      <div class="card">
+        <div class="card-body">
+          <form id="form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Type a city"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <div class="overview">
+            <ul>
+              <h1 id="city">London</h1>
+              <li>
+                Last updated: <span id="actual-day"></span>,
+                <span id="actual-date"></span> at
+                <span id="actual-hours"></span>:<span
+                  id="actual-minutes"
+                ></span>
+              </li>
+              <li id="description">Sunny day</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/rain_heavy.png"
+                  alt=""
+                  id="icon"
+                />
                 <div class="tempUnit">
                   <strong id="temperature">19</strong
-                    ><span class="units"
-                      >
-                  <a href="#" id="celsius"> °C </a>|
-                  <a href="#" id="fahrenheit"> °F</a>
-                  </div>
-                  </div>
-               </div>
-              
-              <div class="col-6"><ul>
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind"></span> m/s</li>
-                </ul></div>
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
-                <div class="weather-forecast" id="forecast"></div>
-              <div class="row weather-list">
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-sun"></i>
-                      </li>
-                      <li class="list-group-item">11/18°</li>
-                      <li class="list-group-item">Sun</li>
-                    </ul>
-                  </div>
+              </div>
+            </div>
+
+            <div class="weather-forecast" id="forecast"></div>
+            <div class="row weather-list">
+              <div class="col-sm">
+                <div class="card weather-day">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li class="list-group-item">11/18°</li>
+                    <li class="list-group-item">Sun</li>
+                  </ul>
                 </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-sun"></i>
-                      </li>
-                      <li class="list-group-item">14/20°</li>
-                      <li class="list-group-item">Mon</li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card weather-day">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="fa-solid fa-sun"></i>
+                    </li>
+                    <li class="list-group-item">14/20°</li>
+                    <li class="list-group-item">Mon</li>
+                  </ul>
                 </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud-sun"></i>
-                      </li>
-                      <li class="list-group-item">10/18°</li>
-                      <li class="list-group-item">Tue</li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card weather-day">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="fa-solid fa-cloud-sun"></i>
+                    </li>
+                    <li class="list-group-item">10/18°</li>
+                    <li class="list-group-item">Tue</li>
+                  </ul>
                 </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud"></i>
-                      </li>
-                      <li class="list-group-item">9/16°</li>
-                      <li class="list-group-item">Wed</li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card weather-day">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="fa-solid fa-cloud"></i>
+                    </li>
+                    <li class="list-group-item">9/16°</li>
+                    <li class="list-group-item">Wed</li>
+                  </ul>
                 </div>
-                <div class="col-sm">
-                  <div class="card weather-day">
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                        <i class="fa-solid fa-cloud-rain"></i>
-                      </li>
-                      <li class="list-group-item">8/15°</li>
-                      <li class="list-group-item">Thu</li>
-                    </ul>
-                  </div>
+              </div>
+              <div class="col-sm">
+                <div class="card weather-day">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <i class="fa-solid fa-cloud-rain"></i>
+                    </li>
+                    <li class="list-group-item">8/15°</li>
+                    <li class="list-group-item">Thu</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="git-link">
+        </div>
+        <div class="git-link">
           <a href="https://github.com/FrankThalia/weather_app.git"
             >Open-source code</a
           >
           by Kseniia Okorokova
         </div>
-        </div>
-        
       </div>
     </div>
   </body>
