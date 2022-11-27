@@ -21,15 +21,15 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
 }
 
 function search(city) {
-  let apiKey = "6a0bac9dced487830ce6066218a5481c";
+  let apiKey = "7059cb165caa3316bff682d263a01b1e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
+search("Saltash");
 
 //Add`s data about date, day, time
 function formatDate(timestamp) {
@@ -62,6 +62,9 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
+
 //Changing celsius - fahrenheit and back
 function showFahrenheitTemp(event) {
   event.preventDefault();
@@ -88,8 +91,3 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
-
-let form = document.querySelector("#form");
-form.addEventListener("submit", handleSubmit);
-
-search("Saltash");
