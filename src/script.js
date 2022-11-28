@@ -91,3 +91,61 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
+
+//forecast data
+
+function getForecast(coordinates) {
+  let apiKey = "7059cb165caa3316bff682d263a01b1e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="col-2">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="forecast-date">${formatDay(forecastDay.dt)}</div>
+          </li>
+          <li class="list-group-item">
+            <img
+              src="https://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              alt=""
+              width="42"
+            />
+          </li>
+          <li class="list-group-item">
+            <div class="forecast-temp">
+              <span class="forecast-temp-max">
+                ${Math.round(forecastDay.temp.max)}°
+              </span>
+              <span class="forecast-temp-min">
+                ${Math.round(forecastDay.temp.min)}°
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}

@@ -13,7 +13,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 li:first-letter {
   text-transform: capitalize;
 }
@@ -36,7 +35,7 @@ a {
 .btn-primary {
   background-color: rgb(38, 38, 194);
   border-color: rgb(38, 38, 194);
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -60,12 +59,11 @@ a {
 .weather-temperature strong {
   font-size: 64px;
   font-weight: 400;
-  color: #212121;
+
   line-height: 1;
 }
 
 .weather-temperature .active {
-  color: #212121;
   cursor: default;
   text-decoration: none;
 }
