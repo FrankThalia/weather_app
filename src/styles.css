@@ -22,7 +22,7 @@ a {
 }
 .container {
   margin: 40px auto;
-  max-width: 700px;
+  max-width: 750px;
 }
 .card {
   border-color: white;
@@ -33,14 +33,19 @@ a {
   padding: 30px;
 }
 .btn-primary {
-  background-color: rgb(38, 38, 194);
-  border-color: rgb(38, 38, 194);
+  background-color: #ec6e4c;
+  border-color: #ec6e4c;
   color: white;
   font-weight: bold;
 }
 
 .list-group {
-  --bs-list-group-border-color: rgb(255, 255, 255);
+  --bs-list-group-border-color: #55758f;
+}
+
+.list-group-item {
+  background-color: #55758f;
+  text-align: center;
 }
 
 .overview {
@@ -76,4 +81,11 @@ a {
   position: relative;
   font-size: 16px;
   top: -34px;
+}
+.link {
+  color: #ec6e4c;
+}
+
+.form-control:hover {
+  color: black;
 }

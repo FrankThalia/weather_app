@@ -31,7 +31,7 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-search("Saltash");
+search("Kyiv");
 
 //Add`s data about date, day, time
 function formatDate(timestamp) {
